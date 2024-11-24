@@ -15,6 +15,7 @@ public class RestClient {
     private RestTemplate restTemplate;
 
     public <T> T get(URI uri, Class<T> responseType) {
+        System.out.println("Firing REST CALL: " + uri.toString());
         ResponseEntity<T> entity = restTemplate.getForEntity(uri, responseType);
         if (!entity.hasBody()) {
             return null;
@@ -23,6 +24,7 @@ public class RestClient {
     }
 
     public <T> T post(URI uri, HashMap<String, String> payload, Class<T> responseType) {
+        System.out.println("Firing REST CALL: " + uri.toString());
         ResponseEntity<T> entity = restTemplate.postForEntity(uri, payload, responseType);
         if (!entity.hasBody()) {
             return null;
