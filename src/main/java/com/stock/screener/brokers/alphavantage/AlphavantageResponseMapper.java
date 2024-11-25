@@ -32,6 +32,7 @@ public class AlphavantageResponseMapper {
             marketData.setCandleClose(Double.valueOf(candleData.get("4. close")));
             marketDatas.add(marketData);
         }
+        System.out.println(marketDatas);
         return marketDatas;
     }
 

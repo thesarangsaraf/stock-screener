@@ -4,6 +4,7 @@ import com.stock.screener.analyser.StockSupportAnalyser;
 import com.stock.screener.brokers.alphavantage.AlphavantageAPIService;
 import com.stock.screener.brokers.dhan.DhanAPIService;
 import com.stock.screener.dto.MarketDataDTO;
+import com.stock.screener.dto.StockSupportAnalysisDTO;
 import com.stock.screener.dto.TechnicalAnalysisResponseDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,7 +37,10 @@ public class MarketAnalysisExecutor {
 
         TechnicalAnalysisResponseDTO response = new TechnicalAnalysisResponseDTO();
         // Stage 1 - support check
-        response.setStockSupportAnalysisResponse(stockSupportAnalyser.analyse(marketData));
+
+        StockSupportAnalysisDTO analyse = stockSupportAnalyser.analyse(marketData);
+
+//        response.setStockSupportAnalysisResponse(stockSupportAnalyser.analyse(marketData));
         return response;
     }
 

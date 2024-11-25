@@ -1,10 +1,12 @@
 package com.stock.screener.dto;
 
 import lombok.Data;
+import lombok.ToString;
 
 import java.util.Date;
 
 @Data
+@ToString
 public class MarketDataDTO {
 
     private Enum<CandleTimeFrame> timeframe;
