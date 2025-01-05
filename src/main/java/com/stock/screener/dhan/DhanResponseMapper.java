@@ -1,4 +1,4 @@
-package com.stock.screener.brokers.dhan;
+package com.stock.screener.dhan;
 
 import com.stock.screener.dto.DhanResponseDTO;
 import com.stock.screener.dto.MarketDataDTO;

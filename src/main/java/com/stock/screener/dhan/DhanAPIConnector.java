@@ -1,4 +1,4 @@
-package com.stock.screener.brokers.dhan;
+package com.stock.screener.dhan;
 
 import com.stock.screener.core.RestClient;
 import com.stock.screener.dto.DhanResponseDTO;
